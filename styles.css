@@ -1,77 +1,89 @@
-/* ====== Tema Escuro Elegante ====== */
+/* ===== Reset básico ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Corpo da página ===== */
 body {
-  background-color: #0d1117;
-  color: #f5f5f5;
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
+    background-color: #121212; /* fundo escuro elegante */
+    color: #E0E0E0; /* texto claro */
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+/* ===== Links ===== */
+a {
+    color: #BB86FC; /* tom roxo suave */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #3700B3; /* roxo mais escuro ao passar o mouse */
+}
+
+/* ===== Cabeçalho ===== */
 header {
-  text-align: center;
-  padding: 3rem 1rem;
-  background: #161b22;
-  border-bottom: 1px solid #30363d;
+    background-color: #1F1F1F; /* barra do topo mais escura */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
-header h1 {
-  font-size: 2.5rem;
-  color: #58a6ff;
-}
-
-header p {
-  font-size: 1.2rem;
-  color: #c9d1d9;
-}
-
-nav a {
-  color: #8b949e;
-  margin: 0 10px;
-  text-decoration: none;
-  font-weight: 500;
-}
-nav a:hover {
-  color: #58a6ff;
-}
-
+/* ===== Seções ===== */
 section {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 1rem;
+    padding: 4rem 2rem;
+    border-bottom: 1px solid #333;
 }
 
-h2 {
-  border-bottom: 2px solid #58a6ff;
-  padding-bottom: 0.5rem;
+/* ===== Botões ===== */
+button {
+    background-color: #BB86FC;
+    color: #121212;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-ul {
-  list-style-type: square;
+button:hover {
+    background-color: #3700B3;
+    color: #fff;
 }
 
-.projetos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
+/* ===== Cards ou projetos ===== */
 .card {
-  background: #161b22;
-  border: 1px solid #30363d;
-  border-radius: 10px;
-  padding: 1rem;
-  flex: 1 1 calc(33% - 1rem);
-  min-width: 250px;
+    background-color: #1E1E1E;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.card h3 {
-  color: #58a6ff;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.7);
 }
 
+/* ===== Rodapé ===== */
 footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  border-top: 1px solid #30363d;
-  color: #8b949e;
+    background-color: #1F1F1F;
+    color: #888;
+    text-align: center;
+    padding: 2rem;
 }
+
+/* ===== Pequenos detalhes ===== */
+hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    margin: 2rem 0;
+}
+
