@@ -1,47 +1,98 @@
-/* ===== Reset básico ===== */
+/* =========================
+   Reset básico
+========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
 }
 
-/* ===== Corpo da página ===== */
+/* =========================
+   Corpo da página
+========================= */
 body {
     background-color: #121212; /* fundo escuro elegante */
     color: #E0E0E0; /* texto claro */
     line-height: 1.6;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.5s, color 0.5s;
 }
 
-/* ===== Links ===== */
-a {
-    color: #BB86FC; /* tom roxo suave */
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-a:hover {
-    color: #3700B3; /* roxo mais escuro ao passar o mouse */
-}
-
-/* ===== Cabeçalho ===== */
+/* =========================
+   Cabeçalho
+========================= */
 header {
-    background-color: #1F1F1F; /* barra do topo mais escura */
+    background-color: #1F1F1F;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInDown 1s forwards;
 }
 
-/* ===== Seções ===== */
+header a {
+    color: #BB86FC;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+header a:hover {
+    color: #3700B3;
+}
+
+/* =========================
+   Seções
+========================= */
 section {
     padding: 4rem 2rem;
     border-bottom: 1px solid #333;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
 }
 
-/* ===== Botões ===== */
+section:nth-child(even) {
+    animation-delay: 0.2s;
+}
+
+h1, h2, h3 {
+    color: #E0E0E0;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+p {
+    color: #CCCCCC;
+    margin-bottom: 1rem;
+}
+
+/* =========================
+   Links
+========================= */
+a {
+    color: #BB86FC;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #3700B3;
+}
+
+/* =========================
+   Botões
+========================= */
 button {
     background-color: #BB86FC;
     color: #121212;
@@ -49,37 +100,71 @@ button {
     padding: 0.7rem 1.5rem;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
 button:hover {
     background-color: #3700B3;
     color: #fff;
+    transform: scale(1.05);
 }
 
-/* ===== Cards ou projetos ===== */
+/* =========================
+   Cards / Projetos
+========================= */
 .card {
     background-color: #1E1E1E;
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, opacity 0.5s;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.02);
     box-shadow: 0 8px 20px rgba(0,0,0,0.7);
 }
 
-/* ===== Rodapé ===== */
+/* =========================
+   Rodapé
+========================= */
 footer {
     background-color: #1F1F1F;
     color: #888;
     text-align: center;
     padding: 2rem;
+    border-top: 1px solid #333;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.3s;
 }
 
-/* ===== Pequenos detalhes ===== */
+/* =========================
+   Imagens
+========================= */
+img {
+    max-width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s, opacity 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+/* =========================
+   Divisores e linhas
+========================= */
 hr {
     border: 0;
     height: 1px;
@@ -87,3 +172,46 @@ hr {
     margin: 2rem 0;
 }
 
+/* =========================
+   Formulário
+========================= */
+input, textarea {
+    background-color: #1F1F1F;
+    color: #E0E0E0;
+    border: 1px solid #333;
+    padding: 0.7rem;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #BB86FC;
+    outline: none;
+}
+
+/* =========================
+   Seleção de texto
+========================= */
+::selection {
+    background-color: #BB86FC;
+    color: #121212;
+}
+
+/* =========================
+   Animações
+========================= */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
