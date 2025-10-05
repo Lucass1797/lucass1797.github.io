@@ -139,3 +139,18 @@ body {
   .card { border: none; box-shadow: none; }
   .skills-grid { flex-direction: column; }
 }
+
+
+---
+
+## 🖤 Tema
+
+Este portfólio utiliza o **tema escuro (dark mode)** com detalhes em azul, inspirado no estilo visual do **VS Code**, para transmitir profissionalismo e modernidade.
+
+---
+
+## 🧩 Como Executar Localmente
+
+1. Faça o clone do repositório:
+   ```bash
+   git clone https://github.com/Lucass1797/lucass1797.github.io
